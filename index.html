@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeWizards</title>
+    <title>CodeWizards Форум</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,12 +19,16 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <p>Мы ценим нашу аудиторию, и наша главная цель - обеспечить вам максимальный <span class="highlight">комфорт</span> при использовании наших продуктов. Будьте уверены, что ваше удовлетворение и успешное решение <span class="highlight">любых</span> возникающих вопросов для нас имеют высшую приоритетность.</p>
+        <section class="forum">
+            <h2>Форум</h2>
+            <div id="topics">
+                <!-- Темы будут добавлены здесь -->
+            </div>
+            <button onclick="openModal('newTopicModal')">Создать тему</button>
         </section>
     </main>
 
-    <!-- Регистрационное окно -->
+    <!-- Модальное окно регистрации -->
     <div id="registerModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('registerModal')">&times;</span>
@@ -39,7 +43,7 @@
         </div>
     </div>
 
-    <!-- Окно входа -->
+    <!-- Модальное окно входа -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('loginModal')">&times;</span>
@@ -50,6 +54,21 @@
                 <label for="loginPassword">Пароль:</label>
                 <input type="password" id="loginPassword" name="password" required>
                 <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно создания темы -->
+    <div id="newTopicModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('newTopicModal')">&times;</span>
+            <h2>Создать тему</h2>
+            <form id="newTopicForm">
+                <label for="topicTitle">Название темы:</label>
+                <input type="text" id="topicTitle" name="title" required>
+                <label for="topicContent">Содержание:</label>
+                <textarea id="topicContent" name="content" required></textarea>
+                <button type="submit">Создать</button>
             </form>
         </div>
     </div>

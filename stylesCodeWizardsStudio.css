@@ -90,3 +90,11 @@ header .profile-pic {
 .profile-details h3 {
     margin-top: 0;
 }
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}

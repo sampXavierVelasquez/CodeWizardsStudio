@@ -7,42 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>CodeWizardsStudio</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#profile">Мой профиль</a></li>
-                <li><a href="#database">База данных</a></li>
-                <li><a href="#scripts">Скрипты</a></li>
-                <li><a href="#auto-update">Автообновление</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Главная</h2>
-            <p>Добро пожаловать в CodeWizardsStudio!</p>
-        </section>
-        <section id="profile">
-            <h2>Мой профиль</h2>
-            <p>Информация о профиле пользователя.</p>
-        </section>
-        <section id="database">
-            <h2>База данных</h2>
-            <p>Данные и информация о базе данных.</p>
-        </section>
-        <section id="scripts">
-            <h2>Скрипты</h2>
-            <p>Скрипты и программный код.</p>
-        </section>
-        <section id="auto-update">
-            <h2>Автообновление</h2>
-            <p>Информация о функциях автообновления.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 CodeWizardsStudio. Все права защищены.</p>
-    </footer>
+    <div class="sidebar">
+        <h1>REVOLUTION</h1>
+        <ul>
+            <li><a href="#profile">Мой профиль</a></li>
+            <li><a href="#database">База данных</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <header>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        </header>
+        <main>
+            <section id="profile">
+                <div class="profile-header">
+                    <img src="profile.jpg" alt="Profile Picture" class="profile-pic-large">
+                    <h2>Артём Векилян <span class="status">*</span></h2>
+                    <p>Владелец | Разработчик</p>
+                </div>
+                <div class="profile-details">
+                    <div class="info">
+                        <h3>Информация</h3>
+                        <p>Детальная информация о пользователе.</p>
+                    </div>
+                    <div class="log">
+                        <h3>Лог действий</h3>
+                        <p>История действий пользователя.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

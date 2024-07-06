@@ -1,64 +1,92 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Общий серый фон */
-    color: #333;
+    background-color: #2e2e2e;
+    color: #fff;
+    display: flex;
 }
 
-header {
-    background-color: #444;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+.sidebar {
+    background-color: #1c1c1c;
+    padding: 2rem;
+    width: 250px;
+    min-height: 100vh;
 }
 
-header h1 {
-    margin: 0;
+.sidebar h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-nav ul {
+.sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
 }
 
-nav ul li {
-    display: inline;
+.sidebar ul li {
+    margin-bottom: 1rem;
 }
 
-nav ul li a {
-    color: white;
+.sidebar ul li a {
+    color: #fff;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
+    font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    background-color: #666;
-    border-radius: 5px;
-}
-
-main {
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
 }
 
-section {
-    margin-bottom: 2rem;
+header {
+    display: flex;
+    justify-content: flex-end;
     padding: 1rem;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-    background-color: #444;
-    color: white;
+header .profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+}
+
+.profile-header .profile-pic-large {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-header h2 {
+    margin: 0.5rem 0;
+}
+
+.profile-header .status {
+    color: #00ff00;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.profile-details .info, .profile-details .log {
+    background-color: #3a3a3a;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    border-radius: 10px;
+    width: 45%;
+}
+
+.profile-details h3 {
+    margin-top: 0;
 }

@@ -3,49 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revolution</title>
+    <title>CodeWizards</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h1>REVOLUTION</h1>
-        <ul>
-            <li><a href="#profile" onclick="showSection('profile')">Мой профиль</a></li>
-            <li><a href="#database" onclick="showSection('database')">База данных</a></li>
-        </ul>
-    </div>
-    <div class="content">
-        <header>
-            <div class="auth-buttons">
-                <button onclick="openModal('registerModal')">Регистрация</button>
-                <button onclick="openModal('loginModal')">Войти</button>
-            </div>
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-        </header>
-        <main>
-            <section id="profile" class="section active">
-                <div class="profile-header">
-                    <img src="profile.jpg" alt="Profile Picture" class="profile-pic-large">
-                    <h2>Артём Векилян <span class="status">*</span></h2>
-                    <p>Владелец | Разработчик</p>
-                </div>
-                <div class="profile-details">
-                    <div class="info">
-                        <h3>Информация</h3>
-                        <p>Детальная информация о пользователе.</p>
-                    </div>
-                    <div class="log">
-                        <h3>Лог действий</h3>
-                        <p>История действий пользователя.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="database" class="section">
-                <h2>База данных</h2>
-                <p>Информация о базе данных.</p>
-            </section>
-        </main>
-    </div>
+    <header>
+        <div class="logo">CodeWizards</div>
+        <nav>
+            <ul>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><button onclick="openModal('registerModal')">Регистрация</button></li>
+                <li><button onclick="openModal('loginModal')">Войти</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <p>Мы ценим нашу аудиторию, и наша главная цель - обеспечить вам максимальный <span class="highlight">комфорт</span> при использовании наших продуктов. Будьте уверены, что ваше удовлетворение и успешное решение <span class="highlight">любых</span> возникающих вопросов для нас имеют высшую приоритетность.</p>
+        </section>
+    </main>
 
     <!-- Регистрационное окно -->
     <div id="registerModal" class="modal">

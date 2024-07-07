@@ -1,20 +1,45 @@
 function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'flex';
+    }
 }
 
 function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
+// Закрытие модального окна при нажатии вне его
 window.onclick = function(event) {
-    const registerModal = document.getElementById('registerModal');
-    const loginModal = document.getElementById('loginModal');
-
-    if (event.target === registerModal) {
-        registerModal.style.display = "none";
-    }
-
-    if (event.target === loginModal) {
-        loginModal.style.display = "none";
-    }
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
 }
+
+document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('registerUsername').value;
+    const password = document.getElementById('registerPassword').value;
+
+    // Добавьте вашу логику регистрации здесь
+
+    alert('Регистрация успешна!');
+    closeModal('registerModal');
+});
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    // Добавьте вашу логику входа здесь
+
+    alert('Вход успешен!');
+    closeModal('loginModal');
+});

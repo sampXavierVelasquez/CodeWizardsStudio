@@ -13,47 +13,49 @@
             <ul>
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Контакты</a></li>
-                <li><button class="register-btn" onclick="openModal('registerModal')">Регистрация</button></li>
-                <li><button class="login-btn" onclick="openModal('loginModal')">Войти</button></li>
+                <li><button onclick="openModal('registerModal')">Регистрация</button></li>
+                <li><button onclick="openModal('loginModal')">Войти</button></li>
             </ul>
         </nav>
     </header>
-    
-    <div class="container">
-        <div class="left-column">
-            <img src="img/IDdM2qtH_ng.jpg" alt="Image">
+    <main>
+        <div class="content">
+            <div class="image-container">
+                <img src="images/your_image.jpg" alt="Image">
+            </div>
+            <div class="text-container">
+                <p>Мы ценим нашу аудиторию, и наша главная цель - обеспечить вам максимальный комфорт при использовании наших продуктов. Будьте уверены, что ваше удовлетворение и успешное решение любых возникающих вопросов для нас имеют высшую приоритетность.</p>
+            </div>
         </div>
-        <div class="right-column">
-            <p>Мы ценим нашу аудиторию, и наша главная цель - обеспечить вам максимальный комфорт при использовании наших продуктов. Будьте уверены, что ваше удовлетворение и успешное решение любых возникающих вопросов для нас имеют высшую приоритетность.</p>
-        </div>
-    </div>
+    </main>
 
-    <!-- Registration Modal -->
+    <!-- Модальное окно регистрации -->
     <div id="registerModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('registerModal')">&times;</span>
-            <form action="javascript:void(0);" method="get">
-                <fieldset class="clearfix">
-                    <p><span class="fontawesome-user"></span><input type="text" placeholder="Логин" required></p>
-                    <p><span class="fontawesome-lock"></span><input type="password" placeholder="Пароль" required></p>
-                    <p><input type="submit" value="РЕГИСТРАЦИЯ"></p>
-                </fieldset>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <label for="registerUsername">Имя пользователя:</label>
+                <input type="text" id="registerUsername" name="username" required>
+                <label for="registerPassword">Пароль:</label>
+                <input type="password" id="registerPassword" name="password" required>
+                <button type="submit">Зарегистрироваться</button>
             </form>
         </div>
     </div>
 
-    <!-- Login Modal -->
+    <!-- Модальное окно входа -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <form action="javascript:void(0);" method="get">
-                <fieldset class="clearfix">
-                    <p><span class="fontawesome-user"></span><input type="text" placeholder="Логин" required></p>
-                    <p><span class="fontawesome-lock"></span><input type="password" placeholder="Пароль" required></p>
-                    <p><input type="submit" value="ВОЙТИ"></p>
-                </fieldset>
+            <h2>Войти</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Имя пользователя:</label>
+                <input type="text" id="loginUsername" name="username" required>
+                <label for="loginPassword">Пароль:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                <button type="submit">Войти</button>
             </form>
-            <p>Нет аккаунта? &nbsp;&nbsp;<a href="#" onclick="openModal('registerModal'); closeModal('loginModal');">Регистрация</a><span class="fontawesome-arrow-right"></span></p>
         </div>
     </div>
 

@@ -1,25 +1,21 @@
-header nav ul li button {
-    background-color: #006400; /* Темно-зеленый цвет */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2e2e2e;
     color: #fff;
-    font-size: 1rem;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-header nav ul li button:hover {
-    background-color: #004d00; /* Более темный оттенок зеленого для эффекта при наведении */
+header {
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
 }
 
-header nav ul li a, header nav ul li button {
-    color: #fff;
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+header .logo {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header nav ul {
@@ -35,25 +31,24 @@ header nav ul li {
     display: inline;
 }
 
-header {
-    background-color: #1c1c1c;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+header nav ul li a, header nav ul li button {
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
 
-header .logo {
-    font-size: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
+header nav ul li button {
+    background-color: #ff0;
+    color: #000;
+    font-size: 1rem;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #2e2e2e;
-    color: #fff;
+header nav ul li button:hover {
+    background-color: #e6e600;
 }
 
 main {
